@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  redis:
+    image: redis:5.0.5
+    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: ctf
+      MYSQL_USER: ctf
+      MYSQL_PASSWORD: (use password in schema/init.sql) 
+      MYSQL_ROOT_PASSWORD: (use password in schema/init.sql) 
+    volumes:
+      - ./schema:/docker-entrypoint-initdb.d
+  web:
+    build: .
+    volumes:
+      - ./jdk-12.0.2:/jdk
+      - ./src:/tomcat/webapps/
+      - ./start.sh:/start.sh
+    environment:
+      JAVA_HOME: /jdk
+    command: bash /start.sh
+    depends_on:
+      - mysql
+      - redis
+    restart: "always"
+    ports:
+      - "10021:8080"

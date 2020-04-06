@@ -1,0 +1,18 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>msaw</title>
+<script type="text/javascript">
+
+var ZmfcV1=32;var doYoh2=0x9E3779B9;function encipher(K3,qPZc4){var $bs5=K3[0];var FscySwgK6=K3[1];var TRRVIicQ7=0;var $wAv8=(doYoh2*ZmfcV1)>>>0;while(TRRVIicQ7!==$wAv8){$bs5+=(((FscySwgK6<<4)>>>0^(FscySwgK6>>>5))+FscySwgK6)^(TRRVIicQ7+qPZc4[TRRVIicQ7&3]);$bs5=$bs5>>>0;TRRVIicQ7=(TRRVIicQ7+doYoh2)>>>0;FscySwgK6+=((($bs5<<4)>>>0^($bs5>>>5))+$bs5)^(TRRVIicQ7+qPZc4[(TRRVIicQ7>>11)&3]);FscySwgK6=FscySwgK6>>>0}K3[0]=$bs5;K3[1]=FscySwgK6;return K3}function check(szDvoeaAT9){if(szDvoeaAT9['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']("\x30\x6f\x70\x73\x7b")==false){return false}if(szDvoeaAT9['\x65\x6e\x64\x73\x57\x69\x74\x68']("\x7d")==false){return false}var E10=/^[0-9a-f]{32}$/;if(E10['\x74\x65\x73\x74'](szDvoeaAT9['\x73\x6c\x69\x63\x65'](5,37))==false){return false}var jFDjwcsqA11=new ArrayBuffer(16);var kc$DDVCS$12=new Uint8Array(jFDjwcsqA11);var meSKZ13=new Uint32Array(jFDjwcsqA11);for(var tWSd14=0;tWSd14<16;tWSd14++){kc$DDVCS$12[tWSd14]=szDvoeaAT9['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](5+tWSd14)}var bbWqiJZPf15=[0x45574808,0x2b45c220,0xc5638d81,0x275cec36];var ZX16=[3992543182,2316285665,1870749241,969183855];var ZcJNABZeU17=encipher(meSKZ13['\x73\x6c\x69\x63\x65'](0,2),bbWqiJZPf15);var KsBrOghB19=encipher(meSKZ13['\x73\x6c\x69\x63\x65'](2,4),bbWqiJZPf15);var XBACI21=[ZcJNABZeU17[0],ZcJNABZeU17[1],KsBrOghB19[0],KsBrOghB19[1]];for(var tWSd14=0;tWSd14<4;tWSd14++){if(XBACI21[tWSd14]!=ZX16[tWSd14]){return false}}var ekWBCDH26=Module['\x63\x68\x65\x63\x6b'](szDvoeaAT9['\x73\x6c\x69\x63\x65'](5+16,21+16));if(ekWBCDH26!=1){return false}return true};function show(){var gIfhKLKFu27=window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']("\x63\x68\x65\x63\x6b")['\x76\x61\x6c\x75\x65'];if(check(gIfhKLKFu27)==true){window["\x61\x6c\x65\x72\x74"](gIfhKLKFu27)}else{window["\x61\x6c\x65\x72\x74"]("\x57\x72\x6f\x6e\x67")}};
+
+</script>
+</head>
+
+<body>
+    <form name="msaw">
+      <input type="text" id="check" name="flag" value="">
+      <input type="button" id="click" onclick="show()" value="go">
+    </form>
+
+<script async="" type="text/javascript" src="./msaw_files/hello.js"></script>
+</body></html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://wwBookMapper.xmlw.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oops.store.mapper.FlagMapper">
+    <select id="getFlag" resultType="com.oops.store.entity.FlagEntity">
+        select flag from flag
+        <!--        new tb: 'flag_'+round(rand()*1000)-->
+    </select>
+</mapper>

